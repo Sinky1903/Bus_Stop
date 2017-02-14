@@ -21,4 +21,11 @@ public class Bus {
     passenger.add(person);
   }
 
+  public void remove(Person person){
+    passenger.remove(person);
+  }
+
+  public boolean busIsFull(){
+    return passenger.size()>=5;
+  }
 }

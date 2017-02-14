@@ -25,8 +25,31 @@ public class BusTest{
   @Test
   public void testAddToBus(){
     bus.add(person);
-    
+
     assertEquals(1, bus.passengerCount());
+  }
+
+  @Test
+  public void testAddLotsToBus(){
+    bus.add(person);
+    bus.add(person);
+    bus.add(person);
+    bus.add(person);
+    bus.add(person);
+
+    assertEquals(5, bus.passengerCount());
+  }
+
+  @Test
+  public void testBusIsFull(){
+    bus.add(person);
+    bus.add(person);
+    bus.add(person);
+    bus.add(person);
+    bus.add(person);
+
+    assertEquals(true, bus.busIsFull());
+
   }
 
 }
